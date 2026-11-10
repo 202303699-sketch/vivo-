@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>VIVO CAFE – المنيو</title>
+<meta name="theme-color" content="#1f2a30">
+<style>
+:root{--bg:#f5f2ea;--card:#fff;--ink:#1f2a30;--teal:#2f9aa6;--chip:#e3f1f2;--line:#ececec;--hd:#1f2a30}
+@media(prefers-color-scheme:dark){:root{--bg:#141b1f;--card:#1f2a30;--ink:#eef2f3;--chip:#27414a;--line:#2d3b42;--hd:#0f1518}}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}html{scroll-padding-top:120px;scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:Tahoma,"Segoe UI",Arial,sans-serif}
+header{background:var(--hd);color:#fff;text-align:center;padding:18px 12px 12px}
+.logo{width:56px;height:56px;border:3px solid var(--teal);border-radius:50%;margin:0 auto 6px;display:grid;place-items:center;font:700 30px Arial}
+h1{margin:0;color:var(--teal);letter-spacing:4px;font:700 20px Arial}
+header p{margin:4px 0 0;font-size:13px;opacity:.85}
+.bar{position:sticky;top:0;z-index:5;background:var(--bg);padding:8px 10px;border-bottom:1px solid var(--line)}
+.bar input{width:100%;padding:10px 14px;border-radius:12px;border:1px solid var(--line);background:var(--card);color:var(--ink);font:inherit;font-size:15px}
+.chips{display:flex;gap:8px;overflow-x:auto;padding:8px 0 2px;scrollbar-width:none}
+.chips::-webkit-scrollbar{display:none}
+.chips a{flex:none;padding:6px 14px;border-radius:20px;background:var(--chip);color:var(--ink);text-decoration:none;font-size:14px}
+.chips a.on{background:var(--teal);color:#fff}
+main{max-width:680px;margin:0 auto;padding:10px 12px 110px}
+section{background:var(--card);border-radius:14px;margin:14px 0;overflow:hidden;border:1px solid var(--line)}
+section h2{margin:0;background:var(--hd);color:var(--teal);font-size:17px;padding:10px 14px}
+.it{display:flex;justify-content:space-between;align-items:center;padding:9px 14px;border-bottom:1px solid var(--line);font-size:15px;gap:8px}
+.it:last-child{border:0}
+.p{display:flex;gap:6px}
+.b{background:var(--chip);color:var(--ink);border:1px solid transparent;border-radius:10px;padding:5px 10px;font:600 14px inherit;min-width:52px;text-align:center;cursor:pointer;position:relative;line-height:1.3}
+.b small{font-size:10px;opacity:.7;display:block;font-weight:400}
+.b:active{transform:scale(.94)}
+.b i{display:none;position:absolute;top:-7px;left:-7px;background:var(--teal);color:#fff;border-radius:10px;font:700 11px Arial;padding:1px 6px;font-style:normal}
+.b.has{border-color:var(--teal)}.b.has i{display:block}
+.none{text-align:center;padding:30px;opacity:.7}
+#cb{position:fixed;left:12px;right:12px;bottom:calc(12px + env(safe-area-inset-bottom,0px));max-width:656px;margin:auto;background:var(--teal);color:#fff;border:0;border-radius:16px;padding:14px 18px;font:700 16px inherit;display:none;justify-content:space-between;box-shadow:0 4px 16px #0005;cursor:pointer;z-index:6}
+#cb.s{display:flex}
+#d{position:fixed;inset:0;background:#000a;display:none;z-index:9;align-items:flex-end}
+#d.s{display:flex}
+#d .box{background:var(--card);color:var(--ink);width:100%;max-width:680px;margin:auto;max-height:88vh;overflow:auto;border-radius:20px 20px 0 0;padding:16px 16px calc(16px + env(safe-area-inset-bottom,0px))}
+#d h3{margin:0 0 8px;display:flex;justify-content:space-between}
+.r{display:flex;align-items:center;gap:8px;padding:8px 0;border-bottom:1px solid var(--line);font-size:15px}
+.r span{flex:1}
+.r button{width:32px;height:32px;border-radius:50%;border:0;background:var(--chip);color:var(--ink);font:700 18px Arial;cursor:pointer}
+.r em{min-width:60px;text-align:left;font-style:normal;font-size:14px}
+#d input,#d textarea{width:100%;margin-top:8px;padding:10px;border-radius:10px;border:1px solid var(--line);background:var(--bg);color:var(--ink);font:inherit;font-size:15px}
+.tot{display:flex;justify-content:space-between;font:700 17px inherit;padding:12px 0 4px}
+#wa{width:100%;margin-top:10px;background:#25d366;color:#fff;border:0;border-radius:14px;padding:14px;font:700 16px inherit;cursor:pointer}
+.x{background:none;border:0;color:var(--ink);font-size:22px;cursor:pointer}
+footer{text-align:center;font-size:12px;opacity:.7;padding:0 0 24px}
+footer a{color:var(--teal)}
+#qm{position:fixed;inset:0;background:#000a;display:none;place-items:center;z-index:10}
+#qm.s{display:grid}
+#qm div{background:#fff;color:#1f2a30;padding:22px;border-radius:16px;text-align:center}
+#q{display:grid;place-items:center;margin:10px 0}
+</style>
+</head>
+<body>
+<header><div class="logo">V</div><h1>VIVO CAFE</h1><p>اختار طلبك واضغط إرسال على واتساب</p></header>
+<div class="bar"><input id="s" type="search" placeholder="🔍 دوّر على صنف..." autocomplete="off"><nav class="chips" id="n"></nav></div>
+<main id="c"></main>
+<footer>VIVO CAFE ☕ • <a href="#" id="qrl">QR الصفحة</a></footer>
+<button id="cb"><span id="cn">🛒 عرض الطلب</span><span id="ct"></span></button>
+<div id="d"><div class="box">
+<h3><span>🛒 طلبك</span><button class="x" id="dx">✕</button></h3>
+<div id="rows"></div>
+<div class="tot"><span>الإجمالي</span><span id="tt"></span></div>
+<input id="tb" inputmode="numeric" placeholder="رقم الترابيزة (اختياري)">
+<input id="nm" placeholder="الاسم (اختياري)">
+<textarea id="nt" rows="2" placeholder="ملاحظات (سكر زيادة، بدون ثلج...)"></textarea>
+<button id="wa">إرسال الطلب على واتساب</button>
+</div></div>
+<div id="qm"><div><b>امسح الكود لفتح المنيو</b><span id="q"></span><small>اضغط للإغلاق</small></div></div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+<script>
+const WA="201207056783",CUR="ج";
+// "اسم|سعر" أو "اسم|صغير/دبل"
+const D=[
+["القهوة",["قهوة تركي|30/40","قهوة محوج|35/45","قهوة فرنساوي|45","قهوة بندق|50","قهوة نوتيلا|60"]],
+["الإسبريسو",["إسبريسو|40/50","ميكاتو|50","لاتيه|55","كابتشينو|65","كورتادو|50","هوت موكا|60","هوت وايت موكا|60","فلات وايت|55"]],
+["المشروبات الساخنة",["شاي|15","شاي أخضر|20","شاي نكهات|25","شاي لاتيه|30","أعشاب|20","كوكتيل أعشاب|35","نسكافيه|40","نسكافيه بلاك|30","هوت سيدر|35","هوت شوكليت كلاسيك|40","هوت شوكليت مارشميلو|50","هوت شوكليت أوريو|60","سحلب كلاسيك|30","سحلب مكسرات|40","سحلب فواكه|50","سحلب فيفو|65"]],
+["العصائر الفريش",["مانجو|50","فراولة|45","جوافة|45","برتقال|40","بلح|50","بطيخ|50","موز|50","كيوي|70","ليمون|40","ليمون نعناع|50"]],
+["السموذي",["مانجو|55","فراولة|50","بطيخ|55","خوخ|50","أناناس|50","بلوبيري|50","ميكس بيري|55"]],
+["الآيس كوفي",["آيس لاتيه|50","آيس لاتيه فليفر|60","آيس شوكليت|50","آيس موكا|60","آيس وايت موكا|60","فرابتشينو|65","فرابتشينو كراميل|70","فرابتشينو شوكليت|70","فرابتشينو نوتيلا|75"]],
+["الكوكتيل",["فلوريدا|60","مانجو خوخ|55","فراولة موز|55","بطيخ نعناع|55","بينا كولادا|65","باشون فروت|55","فروت سالاد كلاسيك|70","فروت سالاد آيس كريم|80","فروت سالاد فيفو|100"]],
+["الديزرت",["مولتن كيك|75","تشيز كيك|60","كب كيك|50","ريد فلفت|60","فادج|50","براونيز|50","ميني كيك|100"]],
+["المشروبات الغازية",["بيبسي|30","سفن|30","ميرندا|35","شويبس|35","فيروز|40","بريل|40","ريدبول|80"]],
+["الميكس صودا",["صن شاين|50","صن رايز|55","بلو سكاي|55","شيري كولا|60","موهيتو كلاسيك|50","موهيتو فليفر|60"]],
+["الميلك شيك",["مانجو|60","فراولة|55","شوكليت|60","فانيليا|60","نوتيلا|65","بلوبيري|60","ميكس بيري|60","أوريو|65","بلح مكسرات|75","تريبل ديتس|65","تشيري|65"]],
+["الآيس كريم",["آيس كريم 3 بولة|50","أوريو مادنس|60"]]
+];
+const $=id=>document.getElementById(id);
+let cart={};try{cart=JSON.parse(sessionStorage.getItem('vc')||'{}')}catch(e){}
+function save(){try{sessionStorage.setItem('vc',JSON.stringify(cart))}catch(e){}}
+function chip(g,i,name,p,sz){const k=g+'.'+i+'.'+sz;return '<button class="b" data-k="'+k+'" data-n="'+name+(sz?' ('+sz+')':'')+'" data-p="'+p+'">'+(sz?'<small>'+sz+'</small>':'')+p+'<i></i></button>'}
+function render(q){
+  q=(q||'').trim();let h='',any=0;
+  D.forEach((g,gi)=>{
+    const L=g[1].map((x,i)=>[x,i]).filter(([x])=>!q||x.split('|')[0].includes(q)||g[0].includes(q));
+    if(!L.length)return;any=1;
+    h+='<section id="c'+gi+'"><h2>'+g[0]+'</h2>'+L.map(([x,i])=>{const t=x.split('|'),a=t[1].split('/');
+      return '<div class="it"><span>'+t[0]+'</span><span class="p">'+(a.length>1?chip(gi,i,t[0],a[0],'صغير')+chip(gi,i,t[0],a[1],'دبل'):chip(gi,i,t[0],a[0],''))+'</span></div>'}).join('')+'</section>';
+  });
+  $('c').innerHTML=h||'<div class="none">مفيش نتيجة 🤷</div>';upd();
+}
+function upd(){
+  document.querySelectorAll('.b').forEach(b=>{const o=cart[b.dataset.k],q=o?o.q:0;b.classList.toggle('has',q>0);b.lastChild.textContent='×'+q});
+  let n=0,t=0;for(const k in cart){n+=cart[k].q;t+=cart[k].q*cart[k].p}
+  $('cb').classList.toggle('s',n>0);$('cn').textContent='🛒 عرض الطلب ('+n+')';$('ct').textContent=t+' '+CUR;
+  return t}
+function add(k,n,p,d){const o=cart[k]||(cart[k]={n:n,p:p,q:0});o.q+=d;if(o.q<=0)delete cart[k];save();upd()}
+$('c').addEventListener('click',e=>{const b=e.target.closest('.b');if(b){add(b.dataset.k,b.dataset.n,+b.dataset.p,1);if(navigator.vibrate)navigator.vibrate(15)}});
+function rows(){
+  const ks=Object.keys(cart);
+  $('rows').innerHTML=ks.length?ks.map(k=>{const o=cart[k];return '<div class="r"><span>'+o.n+'</span><button data-k="'+k+'" data-d="-1">−</button><b>'+o.q+'</b><button data-k="'+k+'" data-d="1">+</button><em>'+o.q*o.p+' '+CUR+'</em></div>'}).join(''):'<div class="none">الطلب فاضي</div>';
+  $('tt').textContent=upd()+' '+CUR;if(!ks.length)$('d').classList.remove('s')}
+$('rows').addEventListener('click',e=>{const b=e.target.closest('button');if(!b)return;const o=cart[b.dataset.k];add(b.dataset.k,o.n,o.p,+b.dataset.d);rows()});
+$('cb').onclick=()=>{rows();$('d').classList.add('s')};
+$('dx').onclick=()=>$('d').classList.remove('s');
+$('d').onclick=e=>{if(e.target.id==='d')$('d').classList.remove('s')};
+$('wa').onclick=()=>{
+  const ks=Object.keys(cart);if(!ks.length)return;
+  let t='*طلب جديد – VIVO CAFE* ☕\n';
+  if($('tb').value.trim())t+='رقم الترابيزة: '+$('tb').value.trim()+'\n';
+  if($('nm').value.trim())t+='الاسم: '+$('nm').value.trim()+'\n';
+  t+='\n';let tot=0;
+  ks.forEach(k=>{const o=cart[k];tot+=o.q*o.p;t+='• '+o.q+'× '+o.n+' = '+o.q*o.p+' '+CUR+'\n'});
+  t+='\n*الإجمالي: '+tot+' '+CUR+'*';
+  if($('nt').value.trim())t+='\nملاحظات: '+$('nt').value.trim();
+  location.href='https://wa.me/'+WA+'?text='+encodeURIComponent(t)};
+$('n').innerHTML=D.map((g,i)=>'<a href="#c'+i+'" data-i="'+i+'">'+g[0]+'</a>').join('');
+render();
+$('s').addEventListener('input',()=>render($('s').value));
+$('n').addEventListener('click',e=>{const a=e.target.closest('a');if(!a)return;e.preventDefault();$('s').value='';render();$('c'+a.dataset.i).scrollIntoView()});
+const L=[...$('n').children];
+addEventListener('scroll',()=>{let cur=0;D.forEach((g,i)=>{const el=$('c'+i);if(el&&el.getBoundingClientRect().top<140)cur=i});L.forEach((l,i)=>l.classList.toggle('on',i==cur));const on=$('n').querySelector('.on');if(on)$('n').scrollTo({left:on.offsetLeft-$('n').offsetWidth/2,behavior:'smooth'})},{passive:true});
+$('qrl').onclick=e=>{e.preventDefault();const q=$('q');q.innerHTML='';try{new QRCode(q,{text:location.href.split('#')[0],width:220,height:220})}catch(x){q.textContent=location.href}$('qm').classList.add('s')};
+$('qm').onclick=()=>$('qm').classList.remove('s');
+</script>
+</body>
+</html>
